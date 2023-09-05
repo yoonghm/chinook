@@ -2,7 +2,7 @@
 
 The Chinook database is a sample database often used in tutorials, documentation, and examples for learning and demonstrating database management systems (DBMS) and SQL. It's a fictional database representing a music store or digital media store, and it typically contains tables and data related to music sales, customers, employees, artists, albums, and tracks.
 
-This repository provide the same SQL script to create a SQLite or a DuckDB database. This SQL script `chinook.sql` was adopted from [`Chinook_Sqlite.sql`]([)](https://github.com/lerocha/chinook-database/blob/master/ChinookDatabase/DataSources/Chinook_Sqlite.sql)
+This repository provide the same SQL script to create a SQLite or a DuckDB database. This SQL script `chinook.sql` was adopted from [`Chinook_Sqlite.sql`](https://github.com/lerocha/chinook-database/blob/master/ChinookDatabase/DataSources/Chinook_Sqlite.sql)
 
 ## Differences between Sqlite3 and DuckDB
 
