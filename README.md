@@ -6,19 +6,21 @@ This repository provide the same SQL script to create a SQLite or a DuckDB datab
 
 ## Differences between Sqlite3 and DuckDB
 
-1. SQLite support the use of double quotatios ("") and square brackets ([]) to enclose table and field names with whitespaces and capital letter. DuckDB only support the former.
-2. SQLite allows users to create a table with a foreign key constraint that references another table that does not exist at the time of the table creation. SQLite does not check the existence of the referenced table when creating the foreign key constraint. However, SQLite does enforce foreign key constraints during inserting or updating of data. DuckDB's behavior is more in line with traditional relational database systems that require referenced tables to exist at the time foreign key constraints are created.
-3. SQLite allows users to drop a table even if the table has one or more fields which are foreign keys of other tables. However, DUckDB disallow this.
+1. SQLite supports the use of double quotatios ("") and square brackets ([]) to enclose table and field names with whitespaces and capital letter. DuckDB only support the former.
+
+2. In SQLite, users can create a table with a foreign key constraint that references another table not yet in existence during table creation. SQLite does not verify the referenced table's existence when creating the foreign key constraint. However, it enforces foreign key constraints during data insertion or updates. DuckDB behaves more in alignment with conventional relational database systems, requiring referenced tables to exist at the time foreign key constraints are created.
+
+3. SQLite permits users to drop a table even if it contains one or more fields serving as foreign keys for other tables. In contrast, DuckDB disallows this action.
 
 ## Database Creation
 
-### Create a SQLite database: `chinook.sqlite`
+### Create a SQLite database `chinook.sqlite`
 
 ```bash
 sqlite3 chinook.sqlite < chinook.sql
 ```
 
-### Create a DuckDB database: `chinook.duckdb`
+### Create a DuckDB database `chinook.duckdb`
 
 ```bash
 duckdb chinook.duckdb < chinook.sql
