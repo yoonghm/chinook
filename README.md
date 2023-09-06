@@ -16,12 +16,22 @@ This repository provide the same SQL script to create a SQLite or a DuckDB datab
 
 ### Create a SQLite database `chinook.sqlite`
 
+**Dos/Unix/Linix/MacOS Command Prompt**
 ```bash
 sqlite3 chinook.sqlite < chinook.sql
+```
+**PowerShell**
+```bash
+Get-Content .\chinook.sql | sqlite3 chinook.sqlite
 ```
 
 ### Create a DuckDB database `chinook.duckdb`
 
+**Dos/Unix/Linix/MacOS Command Prompt**
 ```bash
 duckdb chinook.duckdb < chinook.sql
+```
+**PowerShell**
+```bash
+Get-Content .\chinook.sql | duckdb chinook.duckdb
 ```
