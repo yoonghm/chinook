@@ -237,6 +237,8 @@ CREATE INDEX "IFK_TrackMediaTypeId" ON "Track" ("MediaTypeId");
 /*******************************************************************************
    Populate Tables
 ********************************************************************************/
+BEGIN TRANSACTION;
+
 INSERT INTO "Genre" ("GenreId", "Name") VALUES (1, 'Rock');
 INSERT INTO "Genre" ("GenreId", "Name") VALUES (2, 'Jazz');
 INSERT INTO "Genre" ("GenreId", "Name") VALUES (3, 'Metal');
@@ -15855,4 +15857,4 @@ INSERT INTO "PlaylistTrack" ("PlaylistId", "TrackId") VALUES (17, 2096);
 INSERT INTO "PlaylistTrack" ("PlaylistId", "TrackId") VALUES (17, 3290);
 INSERT INTO "PlaylistTrack" ("PlaylistId", "TrackId") VALUES (18, 597);
 
-
+COMMIT;
